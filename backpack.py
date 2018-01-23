@@ -23,5 +23,10 @@ while game_on is True:
             players[i]['points'] += 1
         else:
             print('You did not guess what is hidden in backpack')
+        play_again = input('Do you want to play again? Type in: YES or NO: ')
+        if play_again == 'NO':
+            game_on = False
+
+#TODO: Improve game logic. Add functions. Exceptions handling.
 
 
