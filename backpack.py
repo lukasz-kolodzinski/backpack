@@ -13,5 +13,15 @@ for x in range(2):
         backpack_items = input('an item name: ')
         players[x]['backpack'].append(backpack_items)
 
-print(players)
+game_on = True
+while game_on is True:
+    for i in range(2):
+        player_guess = input(players[i]['user'] + " guess what is hidden in your mate's backpack: ")
+        second_player = players[(i+1)%2]
+        if player_guess in second_player['backpack']:
+            print('Bravo! You guessed a hidden item!')
+            players[i]['points'] += 1
+        else:
+            print('You did not guess what is hidden in backpack')
+
 
